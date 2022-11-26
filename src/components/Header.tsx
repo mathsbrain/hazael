@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 /* eslint-disable indent */
 /* eslint-disable prettier/prettier */
 import { Fragment } from "react";
@@ -18,20 +19,32 @@ export const Header = () => {
 	const { theme, toggleTheme } = useTheme();
 
 	return (
-		<Popover className="fixed flex w-full items-center justify-between bg-gray-700 bg-opacity-[0.05] p-4 backdrop-blur-lg" as="header">
+		<Popover className="fixed z-20 flex w-full items-center justify-between bg-gray-700 bg-opacity-[0.05] p-4 backdrop-blur-lg" as="header">
 			<Link to="/">
 				<img src={LogoImg} alt="Logo Math'sbrain" className="w-10" />
 			</Link>
 
 			<ul className="hidden items-center gap-16 md:flex">
 				<li>
+					<Link to="/" className="transition-all">
+						<div className="group relative flex cursor-pointer flex-col items-start md:col-span-3">
+							<div className="z-20 flex items-center gap-2">
+								<Typography variant="body1"><span className="font-pop font-normal uppercase">home</span></Typography>
+							</div>
+							<div className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-300">
+								<div className="absolute -inset-y-3 -inset-x-4 z-0 scale-95 bg-yellow-50 opacity-0 backdrop-blur-sm transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-700/50 sm:-inset-x-6 sm:rounded-md"></div>
+							</div>
+						</div>
+					</Link>
+				</li>
+				<li>
 					<Link to="/about" className="transition-all">
 						<div className="group relative flex cursor-pointer flex-col items-start md:col-span-3">
 							<div className="z-20 flex items-center gap-2">
-								<Typography variant="body1"><span className="font-pop font-normal uppercase">Sobre</span></Typography>
+								<Typography variant="body1"><span className="font-pop font-normal uppercase">sobre</span></Typography>
 							</div>
 							<div className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-300">
-								<div className="absolute -inset-y-3 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 backdrop-blur-sm transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-700/50 sm:-inset-x-6 sm:rounded-md"></div>
+								<div className="absolute -inset-y-3 -inset-x-4 z-0 scale-95 bg-yellow-50 opacity-0 backdrop-blur-sm transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-700/50 sm:-inset-x-6 sm:rounded-md"></div>
 							</div>
 						</div>
 					</Link>
@@ -40,22 +53,10 @@ export const Header = () => {
 					<Link to="/projects" className="transition-all">
 						<div className="group relative flex cursor-pointer flex-col items-start md:col-span-3">
 							<div className="z-20 flex items-center gap-2">
-								<Typography variant="body1"><span className="font-pop font-normal uppercase">Projetos</span></Typography>
+								<Typography variant="body1"><span className="font-pop font-normal uppercase">projetos</span></Typography>
 							</div>
 							<div className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-300">
-								<div className="absolute -inset-y-3 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 backdrop-blur-sm transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-700/50 sm:-inset-x-6 sm:rounded-md"></div>
-							</div>
-						</div>
-					</Link>
-				</li>
-				<li>
-					<Link to="/contact" className="transition-all">
-						<div className="group relative flex cursor-pointer flex-col items-start md:col-span-3">
-							<div className="z-20 flex items-center gap-2">
-								<Typography variant="body1"><span className="font-pop font-normal uppercase">Contato</span></Typography>
-							</div>
-							<div className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-300">
-								<div className="absolute -inset-y-3 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 backdrop-blur-sm transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-700/50 sm:-inset-x-6 sm:rounded-md"></div>
+								<div className="absolute -inset-y-3 -inset-x-4 z-0 scale-95 bg-yellow-50 opacity-0 backdrop-blur-sm transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-700/50 sm:-inset-x-6 sm:rounded-md"></div>
 							</div>
 						</div>
 					</Link>
@@ -137,10 +138,22 @@ export const Header = () => {
 							<div className="my-6">
 								<ul className="flex flex-col items-center gap-5">
 									<li>
+										<Link to="/" className="transition-all">
+											<div className="group relative flex cursor-pointer flex-col items-start md:col-span-3">
+												<div className="z-20 flex items-center gap-2">
+													<Typography variant="body1"><span className="font-pop font-normal uppercase">Home</span></Typography>
+												</div>
+												<div className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-300">
+													<div className="absolute -inset-y-3 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 backdrop-blur-sm transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-700/50 sm:-inset-x-6 sm:rounded-md"></div>
+												</div>
+											</div>
+										</Link>
+									</li>
+									<li>
 										<Link to="/about" className="transition-all">
 											<div className="group relative flex cursor-pointer flex-col items-start md:col-span-3">
 												<div className="z-20 flex items-center gap-2">
-													<Typography variant="body1"><span className="font-pop font-normal uppercase">Sobre</span></Typography>
+													<Typography variant="body1"><span className="font-pop font-normal uppercase">sobre</span></Typography>
 												</div>
 												<div className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-300">
 													<div className="absolute -inset-y-3 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 backdrop-blur-sm transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-700/50 sm:-inset-x-6 sm:rounded-md"></div>
@@ -152,19 +165,7 @@ export const Header = () => {
 										<Link to="/projects" className="transition-all">
 											<div className="group relative flex cursor-pointer flex-col items-start md:col-span-3">
 												<div className="z-20 flex items-center gap-2">
-													<Typography variant="body1"><span className="font-pop font-normal uppercase">Projetos</span></Typography>
-												</div>
-												<div className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-300">
-													<div className="absolute -inset-y-3 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 backdrop-blur-sm transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-700/50 sm:-inset-x-6 sm:rounded-md"></div>
-												</div>
-											</div>
-										</Link>
-									</li>
-									<li>
-										<Link to="/contact" className="transition-all">
-											<div className="group relative flex cursor-pointer flex-col items-start md:col-span-3">
-												<div className="z-20 flex items-center gap-2">
-													<Typography variant="body1"><span className="font-pop font-normal uppercase">Contato</span></Typography>
+													<Typography variant="body1"><span className="font-pop font-normal uppercase">projetos</span></Typography>
 												</div>
 												<div className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-300">
 													<div className="absolute -inset-y-3 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 backdrop-blur-sm transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-700/50 sm:-inset-x-6 sm:rounded-md"></div>

@@ -81,14 +81,14 @@ export const Typography = ({ variant, children }: ITypographyProps) => {
 
 		case "body1":
 			return (
-				<p className={`${defaultClasses} font-roboto text-[1rem] font-medium leading-[1.5rem] text-gray-800 dark:text-gray-200`}>
+				<p className={`${defaultClasses} font-roboto text-[1rem] font-normal leading-[1.5rem] text-gray-800 dark:text-gray-200`}>
 					{children}
 				</p>
 			);
 
 		case "body2":
 			return (
-				<p className={`${defaultClasses} font-roboto text-[0.8rem] font-medium leading-[1.3rem] text-gray-800 dark:text-gray-200`}>
+				<p className={`${defaultClasses} font-roboto text-[0.8rem] font-normal leading-[1.3rem] text-gray-800 dark:text-gray-200`}>
 					{children}
 				</p>
 			);
