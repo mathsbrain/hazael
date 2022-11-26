@@ -1,6 +1,5 @@
 import { MdOutlineOpenInNew } from "react-icons/md";
 
-import ProjectImg from "@/assets/projects/hazael.png";
 import { Stack } from "@/components/Stack";
 import { Typography } from "@/components/Typography";
 
@@ -10,6 +9,7 @@ type TStacksProps = {
 };
 
 interface IProjectProps {
+	image: string;
 	name: string;
 	stacks: TStacksProps[];
 	uriPreview: string;
@@ -18,6 +18,7 @@ interface IProjectProps {
 }
 
 export const Project = ({
+	image,
 	name,
 	stacks,
 	uriPreview,
@@ -32,7 +33,7 @@ export const Project = ({
 
 			<div>
 				<img
-					src={ProjectImg}
+					src={image}
 					alt="Hazael"
 					className="w-screen object-cover md:h-44 md:w-64"
 				/>

@@ -1,3 +1,5 @@
+import betrayalImage from "@/assets/projects/betrayal.png";
+import hazaelImage from "@/assets/projects/hazael.png";
 import { Project } from "@/components/Project";
 import { TemplateDefault } from "@/components/Template";
 import { Typography } from "@/components/Typography";
@@ -18,6 +20,7 @@ export const Projects = () => {
 				</Typography>
 
 				<Project
+					image={hazaelImage}
 					name="Hazael"
 					stacks={[
 						{ name: "React", color: "#61DAFB" },
@@ -27,6 +30,19 @@ export const Projects = () => {
 					]}
 					uriPreview="https://mathsbrain.dev/"
 					uriRepository="https://github.com/mathsbrain/hazael"
+					year={2022}
+				/>
+
+				<Project
+					image={betrayalImage}
+					name="Betrayal"
+					stacks={[
+						{ name: "React", color: "#61DAFB" },
+						{ name: "Typescript", color: "#38BDF8" },
+						{ name: "Tailwind CSS", color: "#0070F3" }
+					]}
+					uriPreview="https://betrayal.vercel.app/"
+					uriRepository="https://github.com/mathsbrain/betrayal"
 					year={2022}
 				/>
 			</div>
